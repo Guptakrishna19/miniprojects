@@ -1,0 +1,80 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: darkmagenta;
+}
+.box{
+    height: 400px;
+    width: 500px;
+    background-color: white;
+    overflow: scroll;
+}
+#item{
+    margin: 10px -10px 10px 10px;
+    outline: 0;
+    display: block;
+    border: 0;
+    box-shadow: 0px 0px 5px greenyellow;
+    height: 30px;
+    width: 95%;
+}
+#to-do-box{
+    list-style: none;
+    
+}
+/* #to-do-box li{
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    margin-right: 20px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: -20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+} */
+#to-do-box li .cancel{
+    position: absolute;
+    right: 6px;
+    top: 7px;
+}
+#to-do-box li .check{
+position: absolute;
+right: 33px;
+top: 8px;
+
+}
+.done{
+    background-color: green;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    margin-right: 20px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: -20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+.black{
+    background-color: black;
+    color: white;
+    border-radius: 2px;
+    position: relative;
+    margin-right: 20px;
+    padding: 8px;
+    margin-top: 10px;
+    margin-left: -20px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}

@@ -1,0 +1,47 @@
+*,html,body{
+    margin:0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@100&family=Quicksand:wght@300&family=Rubik:wght@300;400&family=Sofia+Sans+Condensed:wght@1&display=swap");
+.image img{
+    height: 100vh;
+    width: 100vw;
+}
+.content{
+    display: flex;
+}
+.content .image{
+    justify-content: center;
+    
+}
+.inputes{
+    
+    position: absolute;
+    z-index: 100;
+    justify-content: center;
+    text-align: center;
+    top: 50%;
+    left: 35%;
+}
+title{
+    position: absolute;
+    top: 10%;
+    left: 20%;
+}
+input[type=text]{
+    margin: 10px;
+}
+label{
+    color: white;
+}
+input[id=second]{
+    margin-left: 20px
+}
+input[id=third]{
+    margin-left: 35px
+}
+input[id=fourth]{
+    margin-left: 45px
+}

@@ -1,0 +1,34 @@
+body{
+    background-color: blueviolet;
+}
+.search,.btn{
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+    align-items: center;
+}
+.btn{
+    position: absolute;
+    top: 0%;
+    right: 10%;
+}
+.para{
+    display: flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+    /* align-content: center; */
+    justify-content: center;
+    margin: 30px;
+    padding: 20px;
+}
+#search{
+    
+        width: 50%;
+        height: 30px
+}
+#generate{
+    height: 36px;
+    width: 100px;
+    background-color: black;
+    color: white;
+}
