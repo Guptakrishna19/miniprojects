@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="post">
+      <label for="fname">First name:</label><br />
+      <input type="text" id="fname" name="fname" /><br />
+      <label for="lname">Last name:</label><br />
+      <input type="text" id="lname" name="lname" /><br /><br />
+      <input type="submit" value="Submit" id="submit" />
+    </form>
+    <div id="load"></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        function load() {
+          $.ajax({
+            type: "post",
+            url: "read.php",
+            // data: "data",
+            // dataType: "dataType",
+            success: function (response) {
+              $("#load").html(response);
+            },
+          });
+        }
+        $("#submit").on("click", function (e) {
+          e.preventDefault();
+          var fname = $("#fname").val();
+          var lname = $("#lname").val();
+          $.ajax({
+            type: "POST",
+            url: "create.php",
+            data: { fname: fname, lname: lname },
+            // dataType: "",
+            success: function (response) {
+              if (response == 1) {
+                //alert(response.fname);
+                load();
+                $("#load").html("success");
+              } else {
+                $("#load").html("error");
+              }
+            },
+          });
+        });
+        $(document).on('click','.edit-btn',function(){
+            var id=$(this).data('did');
+            var element= this;
+            $.ajax({
+                type: "POST",
+                url: "delete.php",
+                data: {id:id},
+                //dataType: "dataType",
+                success: function (response) {
+                     alert(response);
+                    if(response==1){
+                        $(element).closest('tr').fadeOut('fast');
+                    }
+                    else{
+                        $("#load").html("error");
+                    }
+                }
+            });
+        });
+      });
+    </script>
+  </body>
+</html>
